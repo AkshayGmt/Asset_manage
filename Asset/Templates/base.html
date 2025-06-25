@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <title>Asset Manager</title>
+                <link rel="stylesheet" href="{% static 'style.css' %}">
+        </head>
+ <body>
+    <nav>
+    <ul> <li><a href="{% url 'asset_list' %}">Assets</a></li>
+        <li><a href="{% url 'notification_list' %}">Notifications</a></li>
+        <li><a href="{% url 'violation_list' %}">Violations</a></li>
+    </ul>
+    </nav>
+    <div class="content">
+    {% block content %}{% endblock %}
+    </div>
+</body>
+</html>

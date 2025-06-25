@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Violations</h1>
+<table>
+<tr>
+<th>Asset Name</th>
+<th>Violation Time</th>
+<th>Message</th>
+</tr>
+{% for violation in violations %}
+<tr>
+<td>{{ violation.asset.name }}</td>
+<td>{{ violation.violation_time }}</td>
+<td>{{ violation.message }}</td>
+</tr>
+{% endfor %}
+</table>
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Assets</h1>
+<table>
+<tr>
+<th>Name</th>
+<th>Service Time</th>
+<th>Expiration Time</th>
+<th>Serviced</th>
+</tr>
+{% for asset in assets %}
+<tr>
+<td>{{ asset.name }}</td>
+<td>{{ asset.service_time }}</td>
+<td>{{ asset.expiration_time }}</td>
+<td>{{ asset.serviced }}</td>
+</tr>
+{% endfor %}
+</table>
+{% endblock %}
